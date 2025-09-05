@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --background-dark: #466365;
+    --primary-surface: #648E90;
+    --text-light: #F7FFF7;
+    --accent-peach: #F9E1C8;
+    --error-red: #FF6B6B;
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-light);
+}
+
+a {
+    color: var(--accent-peach);
+}
+
+a:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+
+// 3. Style components according to the theme.
+button,
+.button,
+input[type="submit"] {
+    background-color: var(--primary-surface);
+    color: var(--text-light);
+    border: 1px solid var(--primary-surface);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Atkinson Hyperlegible', sans-serif; // Ensure font consistency
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+    background-color: var(--background-dark);
+    border-color: var(--text-light);
+}
+
+::selection {
+    background-color: var(--primary-surface);
+    color: var(--accent-peach);
+}
+
+::-moz-selection {
+    // Firefox
+    background-color: var(--primary-surface);
+    color: var(--accent-peach);
+}
+
+.error-text {
+    color: var(--error-red);
+}
