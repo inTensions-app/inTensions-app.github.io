@@ -97,13 +97,13 @@ body {
     justify-content: center; // Center vertically within its available space
     align-items: center;
     text-align: center;
-    padding-bottom: 33vh; // Pushes the content up to the one-third mark
+    padding-bottom: 0vh; // Pushes the content up to the one-third mark
 }
 
 .landing-content h1 {
     font-size: 4em;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 // The contact info at the bottom of the page.
@@ -115,4 +115,79 @@ body {
 
 .contact-info a {
     font-size: 1.1em;
+}
+
+// Styles for the mock to-do list on the landing page
+.todo-list-container {
+    margin-top: 40px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.todo-item {
+    padding: 12px 24px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+// Hover effect mimics the 'selected' state
+.todo-item:hover {
+    background-color: var(--primary-surface);
+}
+
+.todo-item-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+// Style for habit items
+.todo-item.habit .todo-item-title {
+    color: var(--accent-peach);
+}
+
+.todo-item-subtitle {
+    font-size: 0.9em;
+    color: rgba(247, 255, 247, 0.6); // --text-light with alpha
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.todo-item-subtitle.overdue {
+    color: var(--error-red);
+}
+
+// Style for snoozed items to give them a faded look
+.todo-item.snoozed .todo-item-title {
+    color: rgba(247, 255, 247, 0.7);
+}
+
+.todo-item.snoozed .todo-item-subtitle {
+    color: rgba(247, 255, 247, 0.4);
+}
+
+.snoozed-list-header {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.snoozed-list-header h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: rgba(247, 255, 247, 0.7); // Faded --text-light
+    margin-bottom: 8px;
+}
+
+.snoozed-list-header hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(247, 255, 247, 0.3);
+    width: 66%;
+    margin: auto;
+}
+
+.snoozed-list-header + .todo-list-container {
+    margin-top: 10px;
 }
