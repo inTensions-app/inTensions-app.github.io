@@ -67,3 +67,52 @@ input[type="submit"]:hover {
 .error-text {
     color: var(--error-red);
 }
+
+// Styles for the new landing page layout.
+
+// Make the html and body take up the full height of the viewport.
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+// Main container to structure the page using flexbox.
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Pushes content and contact info apart
+    align-items: center;
+    min-height: 100vh; // Ensure it takes at least the full viewport height
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+// The main content block (title and button).
+.landing-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center vertically within its available space
+    align-items: center;
+    text-align: center;
+    padding-bottom: 33vh; // Pushes the content up to the one-third mark
+}
+
+.landing-content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+// The contact info at the bottom of the page.
+.contact-info {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-info a {
+    font-size: 1.1em;
+}
