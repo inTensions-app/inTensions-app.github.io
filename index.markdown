@@ -6,26 +6,26 @@ layout: landing
 <div class="landing-container">
   <div class="landing-content">
     <h1>inTensions</h1>
-    <a href="https://play.google.com/store/apps/details?id=com.yourapp.package" class="button">
+    <a href="{{ site.google_play_url }}" class="button">
       Get it on Google Play
     </a>
-        <div class="todo-list-container">   
-      <div class="todo-item habit">
+    <div class="todo-list-container">   
+      <a href="{{ site.google_play_url }}" class="todo-item habit">
         <div class="todo-item-title">Do what matters</div>
         <div class="todo-item-subtitle">Last done: Just now<br>(Averaging every day)</div>
-      </div>
-      <div class="todo-item">
+      </a>
+      <a href="{{ site.google_play_url }}" class="todo-item">
           <div class="todo-item-title">When your todos are longer than today</div>
           <div class="todo-item-subtitle">Added today</div>
-      </div>
-      <div class="todo-item">
+      </a>
+      <a href="{{ site.google_play_url }}" class="todo-item">
         <div class="todo-item-title">Take the paralysis out of analysis</div>
         <div class="todo-item-subtitle overdue">a long time overdue</div>
-      </div>
-      <div class="todo-item habit">
+      </a>
+      <a href="{{ site.google_play_url }}" class="todo-item habit">
         <div class="todo-item-title">No ads, no AI, no nonsense</div>
         <div class="todo-item-subtitle">Last done: Earlier today<br>(Averaging every day)</div>
-      </div>
+      </a>
     </div>
     <!-- Snoozed Items Section -->
     <div class="snoozed-list-header">
@@ -33,12 +33,11 @@ layout: landing
       <hr>
     </div>
     <div class="todo-list-container">
-      <div class="todo-item snoozed">
-        <div class="todo-item-title">worry about tomorrow</div>
+      <a href="{{ site.google_play_url }}" class="todo-item snoozed">
+        <div class="todo-item-title">Worry about tomorrow</div>
         <div class="todo-item-subtitle">Snoozed until tomorrow</div>
-      </div>
+      </a>
     </div>
-
   </div>
   <div class="contact-info">
     <a href="mailto:{{ site.email }}">{{ site.email }}</a>

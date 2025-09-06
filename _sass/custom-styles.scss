@@ -28,29 +28,37 @@ a {
 }
 
 a:hover {
-    color: var(--text-light);
-    text-decoration: underline;
+    // color: var(--text-light);
+    text-decoration: none;
 }
 
-// 3. Style components according to the theme.
 button,
 .button,
+.button:visited,
 input[type="submit"] {
     background-color: var(--primary-surface);
     color: var(--text-light);
     border: 1px solid var(--primary-surface);
     border-radius: 5px;
     padding: 10px 15px;
+    margin-top: 0px;
     font-family: 'Atkinson Hyperlegible', sans-serif; // Ensure font consistency
+    font-weight: bold;
+    font-size: 1.3em;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 110%;
+    max-width: 550px; // Slightly wider than the list container
+    box-sizing: border-box; // Ensures padding is included in the width
+    animation: pulse 10s infinite ease-in-out;
 }
 
 button:hover,
 .button:hover,
 input[type="submit"]:hover {
-    background-color: var(--background-dark);
-    border-color: var(--text-light);
+    background-color: var(--accent-peach);
+    color: var(--accent-peach);
+    border-color: var(--accent-peach);
 }
 
 ::selection {
@@ -104,6 +112,7 @@ body {
     font-size: 4em;
     font-weight: bold;
     margin-bottom: 0px;
+    line-height: 1;
 }
 
 // The contact info at the bottom of the page.
@@ -125,11 +134,13 @@ body {
 }
 
 .todo-item {
+    display: block; // Make the <a> tag behave like a <div>
     padding: 12px 24px;
     margin-bottom: 4px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    text-decoration: none; // Remove underline from links
 }
 
 // Hover effect mimics the 'selected' state
@@ -137,34 +148,46 @@ body {
     background-color: var(--primary-surface);
 }
 
-.todo-item-title {
+.todo-item-title,
+.todo-item:visited .todo-item-title {
+    // Apply to visited links
     font-size: 1.2em;
     font-weight: bold;
     color: var(--text-light);
 }
 
 // Style for habit items
-.todo-item.habit .todo-item-title {
+.todo-item.habit .todo-item-title,
+.todo-item.habit:visited .todo-item-title {
+    // Apply to visited links
     color: var(--accent-peach);
 }
 
-.todo-item-subtitle {
+.todo-item-subtitle,
+.todo-item:visited .todo-item-subtitle {
+    // Apply to visited links
     font-size: 0.9em;
     color: rgba(247, 255, 247, 0.6); // --text-light with alpha
     margin-top: 4px;
     line-height: 1.4;
 }
 
-.todo-item-subtitle.overdue {
+.todo-item-subtitle.overdue,
+.todo-item:visited .todo-item-subtitle.overdue {
+    // Apply to visited links
     color: var(--error-red);
 }
 
 // Style for snoozed items to give them a faded look
-.todo-item.snoozed .todo-item-title {
+.todo-item.snoozed .todo-item-title,
+.todo-item.snoozed:visited .todo-item-title {
+    // Apply to visited links
     color: rgba(247, 255, 247, 0.7);
 }
 
-.todo-item.snoozed .todo-item-subtitle {
+.todo-item.snoozed .todo-item-subtitle,
+.todo-item.snoozed:visited .todo-item-subtitle {
+    // Apply to visited links
     color: rgba(247, 255, 247, 0.4);
 }
 
@@ -188,6 +211,25 @@ body {
     margin: auto;
 }
 
-.snoozed-list-header + .todo-list-container {
+.snoozed-list-header+.todo-list-container {
     margin-top: 10px;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--primary-surface);
+        border-color: var(--primary-surface);
+    }
+
+    50% {
+        // background-color: #749a9c; // A slightly lighter shade of --primary-surface
+        // border-color: #749a9c;
+        border-color: var(--accent-peach);
+        color: var(--accent-peach);
+    }
+
+    100% {
+        background-color: var(--primary-surface);
+        border-color: var(--primary-surface);
+    }
 }
