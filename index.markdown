@@ -39,7 +39,4 @@ layout: landing
       </a>
     </div>
   </div>
-  <div class="contact-info">
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-  </div>
 </div>

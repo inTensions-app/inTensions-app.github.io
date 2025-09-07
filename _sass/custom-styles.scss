@@ -23,7 +23,8 @@ h6 {
     color: var(--text-light);
 }
 
-a {
+a,
+a:visited {
     color: var(--accent-peach);
 }
 
@@ -270,5 +271,49 @@ table td {
     padding: 0;
     white-space: pre-wrap; // Allow text to wrap naturally
     word-break: break-word; // Break long words if needed
-    
+
+}
+
+// New Footer Styles
+.site-footer {
+    border-top: none; // Remove the default top border from the theme
+    padding: 30px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    font-size: 1.1em;
+}
+
+.footer-links a:hover {
+    color: var(--accent-peach);
+    text-decoration: none;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    color: rgba(247, 255, 247, 0.6); // Faded --text-light
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: rgba(247, 255, 247, 0.6); // Faded --text-light
+}
+
+// Wrapper for content on pages with a landing title
+.page-content-wrapper {
+    max-width: 800px; // Standard readable width
+    margin: 40px auto 0; // Add space below the title
+    width: 100%;
+    text-align: left; // Align content to the left for readability
+    padding: 0 20px;
+    box-sizing: border-box;
 }
