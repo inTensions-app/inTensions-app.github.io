@@ -233,3 +233,42 @@ body {
         border-color: var(--primary-surface);
     }
 }
+
+// Table style overrides
+table {
+    color: var(--text-light); // Use the light text color for all table content
+    border-color: rgba(247, 255, 247, 0.3); // Use a subtle border color that fits the theme
+}
+
+// Remove the alternating row color
+table tr:nth-child(even) {
+    background-color: transparent;
+}
+
+// Remove the default header background and adjust the border
+table th {
+    background-color: transparent;
+    border-color: rgba(247, 255, 247, 0.3);
+    border-bottom-width: 2px; // Make the header bottom border slightly thicker
+}
+
+// Adjust the border for table cells
+table td {
+    border-color: rgba(247, 255, 247, 0.3);
+}
+
+// Override syntax highlighting for indented markdown blocks
+.highlighter-rouge .highlight {
+    background: var(--background-dark); // Remove the background from the parent div
+    border: none;
+}
+
+.highlighter-rouge pre.highlight code {
+    color: var(--text-light);
+    background-color: var(--background-dark);
+    border: none;
+    padding: 0;
+    white-space: pre-wrap; // Allow text to wrap naturally
+    word-break: break-word; // Break long words if needed
+    
+}
