@@ -4,6 +4,8 @@ title: Privacy Policy
 permalink: /privacy/
 ---
 
+***To request to review, update, or delete your personal information, email privacy@intensions.app.***
+
 **Last updated September 06, 2025**
 
 This Privacy Notice for Eudaimonia Labs LLC (**"we," "us,"** or **"our"**), describes how and why we might access, collect, store, use, and/or share (**"process"**) your personal information when you use our services (**"Services"**), including when you:
@@ -285,4 +287,4 @@ If you have questions or comments about this notice, you may contact our Data Pr
     United States
 
 ## 14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
-Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please visit: privacy@intensions.app.
+Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, email privacy@intensions.app.
