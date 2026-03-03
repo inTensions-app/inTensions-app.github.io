@@ -1,42 +1,41 @@
 ---
-# This page uses a custom layout to create a simple, full-screen landing page.
 layout: landing
+body_class: eudaimonia
+privacy_url: /intensions/privacy/
 ---
 
 <div class="landing-container">
   <div class="landing-content">
-    <h1>inTensions</h1>
-    <a href="{{ site.google_play_url }}" class="button">
-      Get it on Google Play
-    </a>
-    <div class="todo-list-container">   
-      <a href="{{ site.google_play_url }}" class="todo-item habit">
-        <div class="todo-item-title">Do what matters</div>
-        <div class="todo-item-subtitle">Last done: Just now<br>(Averaging every day)</div>
-      </a>
-      <a href="{{ site.google_play_url }}" class="todo-item">
-          <div class="todo-item-title">When your todos are longer than today</div>
-          <div class="todo-item-subtitle">Added today</div>
-      </a>
-      <a href="{{ site.google_play_url }}" class="todo-item">
-        <div class="todo-item-title">Take the paralysis out of analysis</div>
-        <div class="todo-item-subtitle overdue">a long time overdue</div>
-      </a>
-      <a href="{{ site.google_play_url }}" class="todo-item habit">
-        <div class="todo-item-title">No ads, no AI, no nonsense</div>
-        <div class="todo-item-subtitle">Last done: Earlier today<br>(Averaging every day)</div>
-      </a>
+    <h1 class="company-name">Eudaimonia Labs</h1>
+    <p class="company-tagline">Made for your flourishing</p>
+
+    <div class="philosophy-statement">
+      <p>No ads. No AI. No nonsense. Just tools for your benefit.<br>
+      Offline-first, privacy-first, and human-first.</p>
     </div>
-    <!-- Snoozed Items Section -->
-    <div class="snoozed-list-header">
-      <h3>Snoozed</h3>
-      <hr>
-    </div>
-    <div class="todo-list-container">
-      <a href="{{ site.google_play_url }}" class="todo-item snoozed">
-        <div class="todo-item-title">Worry about tomorrow</div>
-        <div class="todo-item-subtitle">Snoozed until tomorrow</div>
-      </a>
+
+    <div class="app-cards">
+
+      <!-- inTensions card — uses inTensions teal palette -->
+      <div class="app-card app-card--intensions">
+        <h2 class="app-card-title">inTensions</h2>
+        <p class="app-card-description">A minimalist task manager and habit tracker that asks what matters most.</p>
+        <div class="app-card-actions">
+          <a href="{{ site.intensions_google_play_url }}" class="app-card-cta app-card-cta--intensions">Get it on Google Play</a>
+          <a href="/intensions/" class="app-card-learn-more">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- Verbatim card — uses Verbatim parchment palette -->
+      <div class="app-card app-card--verbatim">
+        <h2 class="app-card-title">Verbatim</h2>
+        <p class="app-card-description">Memorize what matters. Bible memorization through spaced repetition and offline voice recognition.</p>
+        <div class="app-card-actions">
+          <span class="app-card-cta app-card-cta--disabled">Coming Soon</span>
+          <a href="/verbatim/" class="app-card-learn-more">Learn more →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

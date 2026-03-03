@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
     --background-dark: #466365;
@@ -216,6 +216,29 @@ body {
     margin-top: 10px;
 }
 
+// CTA variant of a todo-item — shows a button background so it reads as actionable
+.todo-item.todo-item--cta {
+    background-color: var(--primary-surface);
+    border: 1px solid var(--primary-surface);
+    animation: pulse 10s infinite ease-in-out;
+}
+
+.todo-item.todo-item--cta .todo-item-title,
+.todo-item.todo-item--cta:visited .todo-item-title {
+    color: var(--text-light);
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.todo-item.todo-item--cta:hover {
+    background-color: var(--accent-peach);
+    border-color: var(--accent-peach);
+}
+
+.todo-item.todo-item--cta:hover .todo-item-title {
+    color: var(--background-dark);
+}
+
 @keyframes pulse {
     0% {
         background-color: var(--primary-surface);
@@ -232,6 +255,26 @@ body {
     100% {
         background-color: var(--primary-surface);
         border-color: var(--primary-surface);
+    }
+}
+
+// Intentionally hardcoded: this animation runs on the body.eudaimonia company page
+// where CSS variables resolve to the Eudaimonia palette, not the inTensions palette.
+// If inTensions colors ever change, update these hardcoded values to match.
+@keyframes pulse-intensions {
+    0% {
+        background-color: #466365;
+        border-color: #466365;
+    }
+
+    50% {
+        border-color: #F9E1C8;
+        color: #F9E1C8;
+    }
+
+    100% {
+        background-color: #466365;
+        border-color: #466365;
     }
 }
 
@@ -316,4 +359,489 @@ table td {
     text-align: left; // Align content to the left for readability
     padding: 0 20px;
     box-sizing: border-box;
+}
+
+// ==========================================================================
+// VERBATIM PALETTE — Medieval Manuscript Theme
+// ==========================================================================
+
+body.verbatim {
+    --background-dark: #E8E0D2;    // Vellum
+    --primary-surface: #D8CEB7;    // Aged Parchment
+    --text-light: #2B2118;         // Iron Gall Ink
+    --accent-peach: #D4AF37;       // Gold Leaf
+    --error-red: #C44D34;          // Rubric Red
+    --verbatim-azure: #5D7C89;
+    --verbatim-surface-highlight: #F2EBD9;  // Fresh Parchment
+    --verbatim-text-secondary: #594A3C;     // Diluted Ink
+    --verbatim-text-muted: #8B6F69;         // Faded Sepia
+    --verbatim-border: #B0A38E;             // Parchment Edge
+
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-family: 'Roboto', sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--text-light);
+    }
+
+    a, a:visited {
+        color: var(--verbatim-azure);
+    }
+
+    a:hover {
+        color: var(--text-light);
+        text-decoration: none;
+    }
+
+    ::selection {
+        background-color: var(--accent-peach);
+        color: var(--text-light);
+    }
+
+    .footer-links a {
+        color: var(--verbatim-text-secondary);
+    }
+
+    .footer-links a:hover {
+        color: var(--text-light);
+    }
+
+    .footer-links span {
+        color: var(--verbatim-text-muted);
+    }
+
+    .copyright {
+        color: var(--verbatim-text-muted);
+    }
+
+    // Tagline beneath main heading
+    .verbatim-tagline {
+        font-size: 1.4em;
+        color: var(--verbatim-text-secondary);
+        margin-top: 4px;
+        margin-bottom: 24px;
+        font-style: italic;
+    }
+
+    // "Coming Soon" CTA — styled like a button but not a link
+    .verbatim-cta-disabled {
+        display: inline-block;
+        background-color: var(--primary-surface);
+        color: var(--verbatim-text-muted);
+        border: 1px solid var(--verbatim-border);
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1.2em;
+        cursor: default;
+        width: 110%;
+        max-width: 550px;
+        box-sizing: border-box;
+        text-align: center;
+        animation: none;
+    }
+}
+
+// --- Verbatim Dashboard Mock ---
+
+body.verbatim .landing-content {
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+body.verbatim .verbatim-dashboard {
+    margin-top: 40px;
+    max-width: min(680px, 66vw);
+    min-width: min(460px, 33vw);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+// Level Status Tile
+body.verbatim .level-status-tile {
+    background-color: var(--verbatim-surface-highlight);
+    border: 1px solid var(--verbatim-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 4px rgba(43, 33, 24, 0.08);
+}
+
+body.verbatim .level-icon-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+body.verbatim .level-progress-ring {
+    width: 56px;
+    height: 56px;
+    transform: rotate(-90deg);
+}
+
+body.verbatim .level-progress-ring__track {
+    fill: none;
+    stroke: var(--primary-surface);
+    stroke-width: 4;
+}
+
+body.verbatim .level-progress-ring__fill {
+    fill: none;
+    stroke: var(--accent-peach);
+    stroke-width: 4;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.4s ease;
+}
+
+body.verbatim .level-icon-glyph {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4em;
+    color: var(--accent-peach);
+    line-height: 1;
+}
+
+body.verbatim .level-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+body.verbatim .level-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+body.verbatim .level-subtitle {
+    font-size: 0.9em;
+    color: var(--verbatim-text-secondary);
+}
+
+// Section header
+body.verbatim .verbatim-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    margin-top: 4px;
+}
+
+body.verbatim .verbatim-section-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--verbatim-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+body.verbatim .verbatim-section-rule {
+    flex: 1;
+    border: 0;
+    height: 1px;
+    background-color: var(--verbatim-border);
+    margin: 0;
+}
+
+// Journey Cards
+body.verbatim .verbatim-journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+body.verbatim .journey-card {
+    background-color: var(--verbatim-surface-highlight);
+    border: 1px solid var(--verbatim-border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 3px rgba(43, 33, 24, 0.06);
+    cursor: default;
+}
+
+body.verbatim .journey-card-body {
+    margin-bottom: 10px;
+}
+
+body.verbatim .journey-card-title {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+body.verbatim .verse-ref {
+    font-size: 0.85em;
+    color: var(--verbatim-text-secondary);
+}
+
+body.verbatim .journey-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.verbatim .progress-bar-track {
+    flex: 1;
+    height: 6px;
+    background-color: var(--primary-surface);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+body.verbatim .progress-bar-fill {
+    height: 100%;
+    background-color: var(--accent-peach);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+body.verbatim .progress-label {
+    font-size: 0.78em;
+    color: var(--verbatim-text-muted);
+    white-space: nowrap;
+}
+
+// Daily Walk Tile
+body.verbatim .daily-walk-tile {
+    background-color: var(--verbatim-surface-highlight);
+    border: 1px solid var(--verbatim-border);
+    border-left: 4px solid var(--verbatim-azure);
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 3px rgba(43, 33, 24, 0.06);
+    margin-bottom: 12px;
+}
+
+body.verbatim .daily-walk-verse {
+    font-size: 1em;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+body.verbatim .daily-walk-ref {
+    font-size: 0.85em;
+    color: var(--verbatim-text-secondary);
+}
+
+body.verbatim .due-today {
+    color: var(--error-red);
+    font-weight: 600;
+}
+
+
+// ==========================================================================
+// EUDAIMONIA LABS HOME PAGE PALETTE
+// ==========================================================================
+
+body.eudaimonia {
+    --background-dark: #2D3B35;    // Dark Forest (between teal and neutral)
+    --primary-surface: #3D4F46;    // Mid Forest
+    --text-light: #F5F0E8;         // Warm White
+    --accent-peach: #D4AF37;       // Gold (bridges both apps)
+    --error-red: #FF6B6B;
+
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--text-light);
+    }
+
+    a, a:visited {
+        color: var(--accent-peach);
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: var(--text-light);
+    }
+
+    .footer-links a {
+        color: var(--text-light);
+    }
+
+    .footer-links a:hover {
+        color: var(--accent-peach);
+    }
+}
+
+// Company name heading
+body.eudaimonia .company-name {
+    font-size: 3.2em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+// Company tagline
+body.eudaimonia .company-tagline {
+    font-size: 1.4em;
+    color: var(--accent-peach);
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+// Philosophy statement
+body.eudaimonia .philosophy-statement {
+    font-size: 1em;
+    color: rgba(245, 240, 232, 0.75);
+    max-width: 480px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+// App cards container
+body.eudaimonia .app-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+// Individual app card — base
+body.eudaimonia .app-card {
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+// inTensions card — uses inTensions teal palette
+body.eudaimonia .app-card--intensions {
+    background-color: #648E90;
+    border: 1px solid rgba(247, 255, 247, 0.2);
+}
+
+body.eudaimonia .app-card--intensions .app-card-title {
+    color: #F7FFF7;
+}
+
+body.eudaimonia .app-card--intensions .app-card-description {
+    color: rgba(247, 255, 247, 0.8);
+}
+
+body.eudaimonia .app-card--intensions .app-card-cta {
+    background-color: #466365;
+    border-color: #466365;
+    color: #F7FFF7;
+    animation: pulse-intensions 10s infinite ease-in-out;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+body.eudaimonia .app-card--intensions .app-card-cta:hover {
+    background-color: #F9E1C8;
+    border-color: #F9E1C8;
+    color: #466365;
+}
+
+body.eudaimonia .app-card--intensions .app-card-learn-more {
+    color: #F9E1C8;
+}
+
+body.eudaimonia .app-card--intensions .app-card-learn-more:hover {
+    color: #F7FFF7;
+}
+
+// Verbatim card — uses Verbatim parchment palette
+body.eudaimonia .app-card--verbatim {
+    background-color: #D8CEB7;
+    border: 1px solid #B0A38E;
+    font-family: 'Roboto', sans-serif;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-title {
+    color: #2B2118;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-description {
+    color: #594A3C;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-cta--disabled {
+    background-color: #B0A38E;
+    border-color: #B0A38E;
+    color: #8B6F69;
+    cursor: default;
+    font-family: 'Roboto', sans-serif;
+    animation: none;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-cta--disabled:hover {
+    background-color: #B0A38E;
+    border-color: #B0A38E;
+    color: #8B6F69;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-learn-more {
+    color: #5D7C89;
+}
+
+body.eudaimonia .app-card--verbatim .app-card-learn-more:hover {
+    color: #2B2118;
+}
+
+body.eudaimonia .app-card-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+body.eudaimonia .app-card-description {
+    font-size: 0.95em;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+// Actions row: CTA button on left, learn more pushed to right
+body.eudaimonia .app-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+body.eudaimonia .app-card-learn-more {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: auto;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body.eudaimonia .app-card-cta {
+    font-size: 0.95em;
+    padding: 8px 16px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    animation: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }

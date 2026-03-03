@@ -1,7 +1,9 @@
 ---
 layout: page-with-landing-title
 title: Privacy Policy
-permalink: /privacy/
+permalink: /verbatim/privacy/
+body_class: verbatim
+privacy_url: /verbatim/privacy/
 ---
 
 ***To request to review, update, or delete your personal information, email privacy@intensions.app.***
@@ -10,7 +12,7 @@ permalink: /privacy/
 
 This Privacy Notice for Eudaimonia Labs LLC (**"we," "us,"** or **"our"**), describes how and why we might access, collect, store, use, and/or share (**"process"**) your personal information when you use our services (**"Services"**), including when you:
 
-*   Download and use our mobile application (inTensions), or any other application of ours that links to this Privacy Notice
+*   Download and use our mobile application (Verbatim), or any other application of ours that links to this Privacy Notice
 *   Engage with us in other related ways, including any sales, marketing, or events
 
 **Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at privacy@intensions.app.
@@ -65,7 +67,7 @@ We collect personal information that you voluntarily provide to us when you expr
 **Sensitive Information.** We do not process sensitive information.
 
 **Application Data.** If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
-*   *Mobile Device Data.* We automatically collect device information (such as your mobile device ID, model, and manufacturer), operating system, version information and system configuration information, device and application identification numbers, browser type and version, hardware model Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or proxy server). If you are using our application(s), we may also collect information about the phone network associated with your mobile device, your mobile device’s operating system or platform, the type of mobile device you use, your mobile device’s unique device ID, and information about the features of our application(s) you accessed.
+*   *Mobile Device Data.* We automatically collect device information (such as your mobile device ID, model, and manufacturer), operating system, version information and system configuration information, device and application identification numbers, browser type and version, hardware model Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or proxy server). If you are using our application(s), we may also collect information about the phone network associated with your mobile device, your mobile device's operating system or platform, the type of mobile device you use, your mobile device's unique device ID, and information about the features of our application(s) you accessed.
 
 This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.
 
@@ -90,7 +92,7 @@ The information we collect includes:
 *   **To protect our Services.** We may process your information as part of our efforts to keep our Services safe and secure, including fraud monitoring and prevention.
 *   **To identify usage trends.** We may process information about how you use our Services to better understand how they are being used so we can improve them.
 *   **To determine the effectiveness of our marketing and promotional campaigns.** We may process your information to better understand how to provide marketing and promotional campaigns that are most relevant to you.
-*   **To save or protect an individual's vital interest.** We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
+*   **To save or protect an individual's vital interest.** We may process your information when necessary to save or protect an individual's vital interest, such as to prevent harm.
 
 ## 3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?
 ***In Short:*** *We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e., legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or fulfill our contractual obligations, to protect your rights, or to fulfill our legitimate business interests.*
@@ -167,7 +169,7 @@ We have implemented appropriate and reasonable technical and organizational secu
 ## 8. DO WE COLLECT INFORMATION FROM MINORS?
 ***In Short:*** *We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction.*
 
-We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at privacy@intensions.app.
+We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at privacy@intensions.app.
 
 ## 9. WHAT ARE YOUR PRIVACY RIGHTS?
 ***In Short:*** *Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.*
@@ -210,7 +212,7 @@ The table below shows the categories of personal information we have collected i
 | H. Audio, electronic, sensory, or similar information | Images and audio, video or call recordings created in connection with our business activities | NO |
 | I. Professional or employment-related information | Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us | NO |
 | J. Education Information | Student records and directory information | NO |
-| K. Inferences drawn from collected personal information | Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual’s preferences and characteristics | YES |
+| K. Inferences drawn from collected personal information | Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual's preferences and characteristics | YES |
 | L. Sensitive personal Information | | NO |
 
 We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:
@@ -246,7 +248,7 @@ You have rights under certain US state data protection laws. However, these righ
 *   **Right to request** the deletion of your personal data
 *   **Right to obtain a copy** of the personal data you previously shared with us
 *   **Right to non-discrimination** for exercising your rights
-*   **Right to opt out** of the processing of your personal data if it is used for targeted advertising (or sharing as defined under California’s privacy law), the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")
+*   **Right to opt out** of the processing of your personal data if it is used for targeted advertising (or sharing as defined under California's privacy law), the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")
 
 Depending upon the state where you live, you may also have the following rights:
 *   Right to access the categories of personal data being processed (as permitted by applicable law, including the privacy law in Minnesota)
